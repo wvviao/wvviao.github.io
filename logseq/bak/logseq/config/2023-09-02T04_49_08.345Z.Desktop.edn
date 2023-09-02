@@ -415,5 +415,4 @@
  :feature/enable-journals? true
  :default-home {}
  :feature/enable-flashcards? false
- :feature/enable-whiteboards? true
- :journal/page-title-format "yyyy年MM月dd日"}
+ :feature/enable-whiteboards? false}
