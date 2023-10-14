@@ -1,2 +1,15 @@
 - [[群新闻]]
 - [[摘抄]]
+- Post-installation steps for Debian 12 in Hyper-V
+	- Add current user to sudo group
+		- Switch to root user. `su -`
+		- Add the user to `sudo` group. `adduser <username> sudo`
+	- Enable ssh server
+		- Check ssh server status. `sudo service ssh status`
+		- Install ssh server. `sudo apt install openssh-server`
+		- Start the ssh server. `sudo service ssh start`
+	- Install docker
+		- Read and follow the official manual [Install via the Apt repository](https://docs.docker.com/engine/install/debian/#install-using-the-repository)
+		- Add current user to docker group. `sudo usermod -aG docker $USER` 
+		  [Manage Docker as a non-root user](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user)
+		- Activate the changes to groups. `newgrp docker`
